@@ -23,7 +23,8 @@ loop do
   # calculation
   duration_months = duration_years * 12
   percentage_month = (percentage_years / 100.0) / 12.0
-  payment = amount * (percentage_month / (1 - (1 + percentage_month)** -duration_months))
+  payment = amount * (percentage_month /
+    (1 - (1 + percentage_month)**-duration_months))
 
   puts "-------------------------------------------"
   puts "Your monthly payment is #{payment.round(2)}"
@@ -34,7 +35,7 @@ loop do
   loop do
     print "Another calculation? (y/n): "
     another_calculation = gets.chomp.strip.downcase
-    break if another_calculation.start_with?("y") || another_calculation.start_with?("n")
+    break if another_calculation.start_with?("y", "n")
     puts "Please choose 'y' or 'n'"
   end
   break if another_calculation.start_with?("n")
