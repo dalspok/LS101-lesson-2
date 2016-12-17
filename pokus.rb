@@ -1,11 +1,10 @@
-def test_method
-  prompt('test message')
+def test
+  "test"
 end
 
-test_method           # second, try invoking "test_method" here
+puts test1
 
-def prompt(message)
-  Kernel.puts("=> #{message}")
+def test1
+  test
 end
 
-#test_method           # first, try invoking "test_method" here
