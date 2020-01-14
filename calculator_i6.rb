@@ -1,5 +1,5 @@
-OPERATIONS_NAMES = {1 => "addition", 2 => "subtraction", 3 => "multiplication",
-                    4 => "division"}
+OPERATIONS_NAMES = { 1 => "addition", 2 => "subtraction", 3 => "multiplication",
+                     4 => "division" }
 
 def prompt(text)
   puts "--> #{text}"
@@ -25,7 +25,6 @@ end
 prompt "Welcome to calculator, #{username}"
 
 loop do # main loop
-
   first = nil
   loop do
     prompt "What is the first number?"
@@ -54,7 +53,6 @@ loop do # main loop
   4) division
   MSG
 
-
   loop do
     operation = gets.chomp
     break if %w(1 2 3 4).include? operation
@@ -67,14 +65,14 @@ loop do # main loop
 
   result = case operation
            when 1
-            first + second
+             first + second
            when 2
-            first - second
+             first - second
            when 3
-            first * second
+             first * second
            when 4
-            first / second.to_f
-          end
+             first / second.to_f
+           end
 
   prompt "The result of #{operation_to_name(operation)} is: #{result}"
   prompt "Do you want to calculate again? y/n"
